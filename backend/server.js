@@ -1,4 +1,7 @@
+// Importation package http de node
 const http = require('http');
+
+// Importation de l'application
 const app = require('./app');
 
 const normalizePort = val => {
@@ -14,6 +17,8 @@ const normalizePort = val => {
 };
 // la fonction normalizePort renvoie un port valide, qu'il soit fourni sous la forme d'un numéro ou d'une chaîne
 const port = normalizePort(process.env.PORT || '3000');
+
+// Indique à l'application sur quel port le serveur fonctionne (soit 3000)
 app.set('port', port);
 
 // la fonction errorHandler  recherche les différentes erreurs et les gère de manière appropriée. Elle est ensuite enregistrée dans le serveur
@@ -36,7 +41,7 @@ const errorHandler = error => {
       throw error;
   }
 };
-
+// Création du serveur de l'application
 const server = http.createServer(app);
 
 server.on('error', errorHandler);
@@ -45,5 +50,5 @@ server.on('listening', () => {
   const bind = typeof address === 'string' ? 'pipe ' + address : 'port ' + port;
   console.log('Listening on ' + bind);
 });
-
+// Écoute du serveur sur port 3000
 server.listen(port);
