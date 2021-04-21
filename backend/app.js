@@ -13,6 +13,7 @@ const helmet = require('helmet');
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
 
+// Importation du package path pour donner accès au chemin du système de fichier images
 const path = require('path');
 
 const sauceRoutes = require('./routes/sauce');
@@ -23,15 +24,18 @@ const app = express();
 app.use(helmet());
 
 // Connection à la base de données de mongoDB
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ytpd2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+mongoose.connect(process.env.DB_USER_PASS,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 app.use((req, res, next) => {
+  // Accès à l'origine par tout le monde
   res.setHeader('Access-Control-Allow-Origin', '*');
+  // Autorisation de certains en-têtes
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+  // Autorisation des certaines méthodes 
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
   next();
 });
