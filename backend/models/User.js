@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+
+// Permet d'avoir un unique utilisateur pour un même email
 const uniqueValidator = require('mongoose-unique-validator');
 
 // Création du schéma pour se connecter

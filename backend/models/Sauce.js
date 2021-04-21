@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//  Création du schéma du model de sauce
 const sauceSchema = mongoose.Schema({
     // id: { type: mongoose.Types.ObjectId, require: true },    // ObjectID — identifiant unique créé par MongoDB
     name: { type: String, require: true },                      // string — nom de la sauce

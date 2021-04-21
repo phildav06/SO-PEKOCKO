@@ -1,11 +1,13 @@
 // *********** CONTROLE DES SAUCES ***********
 // Importation du fichier "Sauce" dans le dossier "models"
 const Sauce = require('../models/Sauce');
+
+// Importation de la fonction fs.unlink() - Permet de supprimer un fichier.
 const fs = require('fs');
 
 // Création d'une nouvelle sauce transformée en objet js
 exports.createSauce = (req, res, next) => {
-  console.log('createSauce');
+  // console.log('createSauce');
   const sauceObject = JSON.parse(req.body.sauce);
 
   // Suppression de l'id envoyé par le frontend
@@ -25,16 +27,19 @@ exports.createSauce = (req, res, next) => {
 
 // Modification d'une sauce
 exports.modifySauce = (req, res, next) => {
-  console.log('modifySauce');
+  // console.log('modifySauce');
   const sauceObject = req.file ?
     {
       ...JSON.parse(req.body.sauce),
       imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     } : { ...req.body };
+  // Recherche de la sauce par son id
   Sauce.findById(req.params.id)
     .then(sauce => {
       const filename = sauce.imageUrl.split('/images/')[1];
+      // Suppression du fichier (image)
       fs.unlink(`images/${filename}`, () => {
+        // Mise à jour de la sauce correspondante
         Sauce.updateOne({ _id: req.params.id }, { ...sauceObject, _id: req.params.id })
           .then(() => res.status(200).json({ message: 'Sauce modifiée !' }))
           .catch(error => res.status(400).json({ error }));
@@ -45,11 +50,13 @@ exports.modifySauce = (req, res, next) => {
 
 // Suppression d'une sauce
 exports.deleteSauce = (req, res, next) => {
-  console.log('deleteSauce');
+  // console.log('deleteSauce');
   Sauce.findById(req.params.id)
     .then(sauce => {
       const filename = sauce.imageUrl.split('/images/')[1];
+      // Suppression du fichier (image)
       fs.unlink(`images/${filename}`, () => {
+        // Suppression de la sauce
         Sauce.deleteOne({ _id: req.params.id })
           .then(() => res.status(200).json({ message: 'Sauce supprimée !' }))
           .catch(error => res.status(400).json({ error }));
@@ -60,7 +67,7 @@ exports.deleteSauce = (req, res, next) => {
 
 // Récupération d'une sauce
 exports.getOneSauce = (req, res, next) => {
-  console.log('getOneSauce');
+  // console.log('getOneSauce');
   Sauce.findById(req.params.id)
     .then(sauce => {
       console.log(sauce);
@@ -71,7 +78,7 @@ exports.getOneSauce = (req, res, next) => {
 
 // Récupération de toutes les sauces
 exports.getAllSauces = (req, res, next) => {
-  console.log('getAllSauces');
+  // console.log('getAllSauces');
   Sauce.find()
     .then(sauces => res.status(200).json(sauces))
     .catch(error => res.status(400).json({ error }));
@@ -79,7 +86,7 @@ exports.getAllSauces = (req, res, next) => {
 
 // Like ou Dislike d'une sauce (3 possibilités soit like/dislike: case 0, soit like: case 1, soit dislike: case -1)
 exports.likeDislikeSauce = (req, res, next) => {
-  console.log('likeDislikeSauce');
+  // console.log('likeDislikeSauce');
   switch (req.body.like) {
     case 0:                                                                       // Si j'aime = 0, l'utilisateur annule ce qu'il aime ou n'aime pas
       Sauce.findById(req.params.id)

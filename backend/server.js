@@ -1,9 +1,10 @@
-// Importation package http de node
+// Importation package http de node pour créer un serveur
 const http = require('http');
 
-// Importation de l'application
+// Importation de l'application (dossier app)
 const app = require('./app');
 
+// Renvoi d'un port valide
 const normalizePort = val => {
   const port = parseInt(val, 10);
 
@@ -21,7 +22,8 @@ const port = normalizePort(process.env.PORT || '3000');
 // Indique à l'application sur quel port le serveur fonctionne (soit 3000)
 app.set('port', port);
 
-// la fonction errorHandler  recherche les différentes erreurs et les gère de manière appropriée. Elle est ensuite enregistrée dans le serveur
+// la fonction errorHandler  recherche les différentes erreurs et les gère de manière appropriée
+// Elle est ensuite enregistrée dans le serveur
 const errorHandler = error => {
   if (error.syscall !== 'listen') {
     throw error;
