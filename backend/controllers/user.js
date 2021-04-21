@@ -1,11 +1,14 @@
+// Importation bcrypt pour cryptage du mot de passe
 const bcrypt = require('bcrypt');
+
+// Importation du package jsonwebtoken
 const jwt = require('jsonwebtoken');
 
 const User = require('../models/User');
 
 // Création de nouveaux utilisateurs dans la base de données
 exports.signup = (req, res, next) => {
-    // Chiffrage du mot de passe pour chaque utilisateur
+    // Chiffrage du mot de passe pour chaque utilisateur (hachage 10 tours)
     bcrypt.hash(req.body.password, 10)
         .then(hash => {
             const user = new User({
@@ -41,7 +44,7 @@ exports.login = (req, res, next) => {
                         userId: user._id,
                         token: jwt.sign(
                             { userId: user._id },
-                            'RANDOM_TOKEN_SECRET',
+                            `${process.env.TOKEN}`,
                             { expiresIn: '24h' }
                         )
                     });
