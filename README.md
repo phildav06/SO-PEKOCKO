@@ -61,21 +61,21 @@ Dans le terminal, installez les paquets suivants :</br>
 Pour configurer votre base de donnée, vous pouvez suivre les indications d'OPENCLASSROOMS à l'adresse suivante :</br>
 https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb/6466348-configurez-votre-base-de-donnees </br>
 Récupérez et concervez le lien de connection à votre base de données ainsi que vos  login et mot de passe.</br>
-Maintenant que votre BD est prête, installez les paquets suivants :</br>
+Maintenant que votre DB est prête, installez les paquets suivants :</br>
           - <b class="term">mongoose</b> avec la commande :</br>
                 <em>npm i -s mongoose</em></br></br>
           - <b class="term">mongoose-unique-validator</b> avec la commande :</br>
                 <em>npm i -s mongoose-unique-validator</em></br></br>
 
 1.10- Protection des connections :</br>
-Dans la partie backend, vous trouverez un fichier nommé .env.exemple.</br>
-Renommez le en .env puis modifiez l'adresse du lien de BD_USER_PASS avec celle de votre BD de mongoDB_Atlas en y mettant votre login et votre mot de passe.
-Vous pouvez aussi modifier le TOKEN présent.
+Dans la partie backend, vous trouverez un fichier nommé <strong>.env.exemple</strong></br>
+Renommez le en .env puis modifiez l'adresse du lien de <strong>DB_USER_PASS</strong> avec celle de votre DB de mongoDB_Atlas en y mettant votre login et votre mot de passe.
+Vous devez aussi modifier le <strong>TOKEN</strong> présent.
 
 1.11- Démarrage du serveur nodemon :</br>
 Lancez le serveur nodemon avec la commande :</br>
 <em>nodemon server</em></br></br>
-Vous devriez voir en bas du terminal le texte suivant : "Connection réussie !"</br></br>
+Vous devriez voir en bas du terminal le texte suivant : <em>"Connection réussie !"</em></br></br>
 
 2- UTILISATION DE L'API</br>
 Ouvrez votre navigateur web et collez cette adresse :</br>
