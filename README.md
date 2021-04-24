@@ -19,7 +19,7 @@ Vous devrez tout d'abord installer <img src="https://nodejs.org/static/images/lo
 
 1.4- Clônage du projet</br>
       - Choississez un dossier vierge dans lequel vous souhaitez placer le projet</br>
-      - Faites un clic droit sur ce dossier et ouvrez le avec votre éditeur de code</br>
+      - Faites un clic droit sur ce dossier et ouvrez-le avec votre éditeur de code</br>
       - Ouvrez un nouveau terminal et clônez le projet avec la commande :</br>
                 <em>git clone https://github.com/phildav06/SO-PEKOCKO.git</em></br>
 
