@@ -26,9 +26,9 @@ https://git-scm.com/downloads
       
 1.5- Partie <b class="term">frontend </b>:</br>
 Ouvrez un nouveau terminal et placez-vous dans le dossier frontend avec la commande :</br>
-                <em>cd frontend</em>.</br></br>
+                <em>cd frontend</em></br></br>
           - Installez <b class="term">npm</b> avec la commande :</br>
-                <em>npm install --force</em>
+                <em>npm install --force</em></br></br>
           - puis lancez :</br>
                 <em>npm start</em></br></br>
                 
