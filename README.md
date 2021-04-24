@@ -52,18 +52,8 @@ Ouvrez un nouveau terminal et placez-vous dans le dossier <b class="term">backen
 Dans le terminal, installez les paquets suivants :</br>
           - <b class="term">nodemon</b> avec la commande :</br>
                 <em>npm i -g nodemon</em></br></br>
-          - <b class="term">express</b> avec la commande :</br>
-                <em>npm i -s express</em></br></br>
-          - <b class="term">bodyParser</b> avec la commande :</br>
-                <em>npm i -s body-parser</em></br></br>
-          - <b class="term">bcrypt</b> avec la commande :</br>
-                <em>npm i -s bcrypt</em></br></br>
-          - <b class="term">jsonwebtoken</b> avec la commande :</br>
-                <em>npm i -s jsonwebtoken</em></br></br>
-          - <b class="term">multer</b> avec la commande :</br>
-                <em>npm i -s multer</em></br></br>
-          - <b class="term">helmet</b> avec la commande :</br>
-                <em>npm i -s helmet</em></br></br>
+          - <b class="term">express</b>, <b class="term">bodyParser</b>, <b class="term">bcrypt</b>, <b class="term">jsonwebtoken</b>, <b class="term">multer</b>, <b class="term">helmet</b>, avec la commande :</br>
+                <em>npm i -s express body-parser bcrypt jsonwebtoken multer helmet</em></br></br>
           - <b class="term">dotenv</b> avec la commande :</br>
                 <em>npm i dotenv</em></br></br>
 
