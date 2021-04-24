@@ -15,7 +15,7 @@ https://code.visualstudio.com/
 Vous devrez tout d'abord installer <img src="https://nodejs.org/static/images/logo.svg" alt="node.js" width="60" align="center"> sur votre ordinateur</br>
 (cette application à été développée sous version 15.11.0)</br>
 
-1.3- Installez git sur votre machine à l'adresse suivante :</br>
+1.3- Installez <img src="https://git-scm.com/images/logo@2x.png" alt="git" width="60" align="center"> sur votre machine à l'adresse suivante :</br>
 https://git-scm.com/downloads
 
 1.4- Clônage du projet</br>
