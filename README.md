@@ -69,7 +69,7 @@ Maintenant que votre DB est prête, installez les paquets suivants :</br>
 
 1.10- Protection des connections :</br>
 Dans la partie backend, vous trouverez un fichier nommé <strong>.env.exemple</strong></br>
-Renommez le en .env puis modifiez l'adresse du lien de <strong>DB_USER_PASS</strong> avec celle de votre DB de mongoDB_Atlas en y mettant votre login et votre mot de passe.
+Renommez le en <strong>.env</strong> puis modifiez l'adresse du lien de <strong>DB_USER_PASS</strong> avec celle de votre DB de mongoDB_Atlas en y mettant votre login et votre mot de passe.
 Vous devez aussi modifier le <strong>TOKEN</strong> présent.
 
 1.11- Démarrage du serveur nodemon :</br>
