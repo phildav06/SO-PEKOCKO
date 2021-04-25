@@ -9,13 +9,16 @@ Le MVP du projet est une application web permettant aux utilisateurs d’ajouter
 1- PRÉPARATION DE VOTRE ENVIRONNEMENT DE TRAVAIL
 
 1.1- Utilsez un éditeur de code comme par exemple :</br>
-Visual Studio Code <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4CT2M?ver=b1c6&q=100&h=75&w=75&b=%23FFFFFFFF&aim=true" alt="VS code" width="40" align="center">
+Visual Studio Code <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4CT2M?ver=b1c6&q=100&h=75&w=75&b=%23FFFFFFFF&aim=true" alt="VS code" width="40" align="center"></br>
+Lien de téléchargement : https://code.visualstudio.com/download</br>
 
 1.2- Installation de node.js</br>
 Vous devrez tout d'abord installer <img src="https://nodejs.org/static/images/logo.svg" alt="node.js" width="60" align="center"> sur votre ordinateur</br>
 (cette API à été développée sous version 15.11.0)</br>
+Lien de téléchargement : https://nodejs.org/fr/ </br>
 
 1.3- Installez <img src="https://git-scm.com/images/logo@2x.png" alt="git" width="60" align="center"> sur votre machine</br>
+Lien de téléchargement : https://git-scm.com/downloads</br>
 
 1.4- Clônage du projet</br>
       - Choississez un dossier vierge dans lequel vous souhaitez placer le projet</br>
