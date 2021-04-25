@@ -73,12 +73,13 @@ Maintenant que votre DB est prête, installez les paquets suivants :</br>
 1.10- Protection des connections :</br>
 Dans la partie backend, vous trouverez un fichier nommé <strong>.env.exemple</strong></br>
 Renommez le en <strong>.env</strong> puis modifiez l'adresse du lien de <strong>DB_USER_PASS</strong> avec celle de votre DB de mongoDB_Atlas en y mettant votre login et votre mot de passe.
-Vous devez aussi modifier le <strong>TOKEN</strong> présent.
+Vous devez aussi modifier le <strong>TOKEN</strong> présent.</br>
+Par sécurité, ajoutez le fichier <strong>.env</strong> à un fichier <strong>.gitignore</strong>
 
 1.11- Démarrage du serveur nodemon :</br>
 Lancez le serveur nodemon avec la commande :</br>
 <em>nodemon server</em></br></br>
-Vous devriez voir en bas du terminal le texte suivant : <em>"Connection réussie !"</em></br></br>
+Vous devriez voir en bas du terminal le texte suivant : <em>"Connexion à MongoDB réussie !"</em></br></br>
 
 2- UTILISATION DE L'API</br>
 Ouvrez votre navigateur web et collez cette adresse :</br>
