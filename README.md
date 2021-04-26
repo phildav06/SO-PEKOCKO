@@ -41,8 +41,6 @@ Dans ce terminal installez <b class="term">Angular </b> avec les commandes :</br
                 <em>npm install -g @angular/cli</em></br>
                 - puis chargez le serveur avec :</br>
                 <em>ng serve</em></br></br>
-                - démarrez le serveur avec :</br>
-                <em>npm start</em></br></br>
                 Attendez le chargement total</br></br>
 
 1.7- Partie <b class="term">backend </b>:</br>
@@ -73,12 +71,18 @@ Maintenant que votre DB est prête, installez les paquets suivants :</br>
 1.10- Protection des connections :</br>
 Dans la partie backend, vous trouverez un fichier nommé <strong>.env.exemple</strong></br>
 Renommez le en <strong>.env</strong> puis modifiez l'adresse du lien de <strong>DB_USER_PASS</strong> avec celle de votre DB de mongoDB_Atlas en y mettant votre login et votre mot de passe.
-Vous devez aussi modifier le <strong>TOKEN</strong> présent.
+Vous devez aussi modifier le <strong>TOKEN</strong> présent.</br>
+Par sécurité, ajoutez le fichier <strong>.env</strong> à un fichier <strong>.gitignore</strong>
 
-1.11- Démarrage du serveur nodemon :</br>
-Lancez le serveur nodemon avec la commande :</br>
+1.11- LANCEMENT DE  L'API :</br>
+- Fermez le projet et rouvrez-le.</br>
+- Ouvrez un terminal et retournez dans le frontend (voir 1.5).</br>
+- Tapez la commande :</br>
+<em>npm start</em></br></br>
+- Ouvrez un second terminal et retournez dans le backend (voir 1.7).</br>
+- Tapez la commande :</br>
 <em>nodemon server</em></br></br>
-Vous devriez voir en bas du terminal le texte suivant : <em>"Connection réussie !"</em></br></br>
+Vous devriez voir en bas du terminal le texte suivant : <em>"Connexion à MongoDB réussie !"</em></br></br>
 
 2- UTILISATION DE L'API</br>
 Ouvrez votre navigateur web et collez cette adresse :</br>
